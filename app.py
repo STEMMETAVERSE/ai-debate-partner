@@ -16,7 +16,7 @@ if st.button("Send"):
         with st.spinner("Processing natively through the cluster..."): 
             try:
                 # 3. Route via internal endpoints rather than requests.post 
-                response = client.chat.completions.create( model="mistralai/Mistral-7B-Instruct-v0.3", messages=[{"role": "user", "content": f"""
+                response = client.chat.completions.create( model="meta-llama/Llama-3.1-8B-Instruct", messages=[{"role": "user", "content": f"""
                 Argue against this statement:
                 {topic}
                 """}], max_tokens=50 ) 
